@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Calvera">
+  <!-- Favicon / static fallback. Live UI logos are inlined (Logo.astro) so they track CSS accent vars. -->
+  <defs>
+    <radialGradient id="accretion" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="42%" stop-color="#000000"/>
+      <stop offset="47%" stop-color="#ffcf85"/>
+      <stop offset="60%" stop-color="#e0632a"/>
+      <stop offset="72%" stop-color="#e0632a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#e0632a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="50" cy="50" r="46" fill="url(#accretion)" filter="url(#glow)"/>
+</svg>
